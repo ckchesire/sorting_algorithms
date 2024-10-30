@@ -19,13 +19,14 @@ void quick_sort(int *array, size_t size)
  * @array: array of integers to sort
  * @start: start of the array index
  * @end: end of the array index
- * @size: size of the whol array
+ * @size: size of the whole array
  */
 void quick_sort_recursive(int *array, int start, int end, size_t size)
 {
 	int pivot;
 
-	if (start >= end || start < 0)
+
+	if (start >= end || start < 0 || end <= 0)
 		return;
 
 	pivot = partition(array, start, end, size);
@@ -37,8 +38,8 @@ void quick_sort_recursive(int *array, int start, int end, size_t size)
  * partition - function to partition the array
  * @array: array of intergers to be sorted
  * @start: start of the array
- * @size: size of the whole array
  * @end: end of the array
+ * @size: size of the whole array
  * Return: returns the position of i
  */
 int partition(int *array, int start, int end, size_t size)
