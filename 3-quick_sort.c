@@ -63,7 +63,6 @@ int partition(int *array, int start, int end, size_t size)
 		j++;
 	}
 	i++;
-
 	if (i != end)
 	{
 		tmp = array[i];
@@ -71,5 +70,6 @@ int partition(int *array, int start, int end, size_t size)
 		array[end] = tmp;
 		print_array(array, size);
 	}
+
 	return (i);
 }
